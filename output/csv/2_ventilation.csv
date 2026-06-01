@@ -1,0 +1,4 @@
+﻿location,air_flow_m3_min,air_velocity_mps,leakage_coefficient,distribution_coefficient
+лава нижняя часть,1950.0,3.68,1.25,1.0
+очистная выработка,1950.0,3.68,1.25,1.0
+участок,2450.0,2.85,1.25,1.0

@@ -1,0 +1,2 @@
+﻿premise_id,premise_name,premise_type,length_m,pillar_length_m,daily_production,coal_production_coef,plast_development_type,conveyor_control_type,ventilation_scheme,cross_section_m2,conveyor_speed,rock_mass_density,coal_density,company_id
+4,Лава 204к-Ю,лава,200.0,1050.0,2200.0,0.81,Без разделения на слои,Полное обрушение,1К-Н-Н,8.4,1.1,1.64,1.47,kaz_mine

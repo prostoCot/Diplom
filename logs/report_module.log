@@ -1,0 +1,630 @@
+2026-05-06 13:37:55,768 [INFO] src.database_connector: Подключение к SQLite: incident_db.sqlite
+2026-05-06 13:37:55,770 [INFO] src.database_connector: SQLite: соединение установлено
+2026-05-06 13:37:55,774 [INFO] src.database_connector: Соединение с БД закрыто
+2026-05-06 13:37:55,779 [INFO] src.report_manager: [Шаг 3] Подключение к БД и проверка инцидента...
+2026-05-06 13:37:55,780 [INFO] src.database_connector: Подключение к SQLite: incident_db.sqlite
+2026-05-06 13:37:55,781 [INFO] src.database_connector: SQLite: соединение установлено
+2026-05-06 13:37:55,783 [INFO] src.database_connector: Соединение с БД закрыто
+2026-05-06 13:37:55,784 [INFO] src.report_manager: Инцидент найден: 2023-03-14, шахта: kaz_mine
+2026-05-06 13:37:55,784 [INFO] src.report_manager: [Шаг 4] Извлечение данных из БД (SQL-запросы)...
+2026-05-06 13:37:55,785 [INFO] src.database_connector: Подключение к SQLite: incident_db.sqlite
+2026-05-06 13:37:55,786 [INFO] src.database_connector: SQLite: соединение установлено
+2026-05-06 13:37:55,793 [INFO] src.query_executor: Запрос [premise]: 1 строк
+2026-05-06 13:37:55,795 [INFO] src.query_executor: Запрос [company]: 0 строк
+2026-05-06 13:37:55,798 [INFO] src.query_executor: Запрос [geo_working]: 1 строк
+2026-05-06 13:37:55,800 [INFO] src.query_executor: Запрос [geo_satellites]: 1 строк
+2026-05-06 13:37:55,802 [INFO] src.query_executor: Запрос [equipment]: 1 строк
+2026-05-06 13:37:55,805 [INFO] src.query_executor: Запрос [regulatory]: 1 строк
+2026-05-06 13:37:55,807 [INFO] src.query_executor: Запрос [ventilation]: 3 строк
+2026-05-06 13:37:55,808 [INFO] src.query_executor: Запрос [sensor_ch4]: 8 строк
+2026-05-06 13:37:55,811 [INFO] src.query_executor: Запрос [pressure]: 48 строк
+2026-05-06 13:37:55,812 [INFO] src.query_executor: Запрос [ch4_floor]: 60 строк
+2026-05-06 13:37:55,813 [INFO] src.query_executor: Запрос [ch4_mid]: 9 строк
+2026-05-06 13:37:55,814 [INFO] src.query_executor: Запрос [seismic]: 8 строк
+2026-05-06 13:37:55,816 [INFO] src.query_executor: Запрос [premise_vent_shaft]: 1 строк
+2026-05-06 13:37:55,816 [INFO] src.database_connector: Соединение с БД закрыто
+2026-05-06 13:37:55,816 [INFO] src.report_manager: [Шаг 5] Сохранение промежуточных данных в CSV...
+2026-05-06 13:37:55,891 [INFO] src.csv_exporter: CSV сохранён: 2_premise.csv (1 строк)
+2026-05-06 13:37:55,895 [INFO] src.csv_exporter: CSV сохранён: 2_company.csv (0 строк)
+2026-05-06 13:37:55,899 [INFO] src.csv_exporter: CSV сохранён: 2_geo_working.csv (1 строк)
+2026-05-06 13:37:55,902 [INFO] src.csv_exporter: CSV сохранён: 2_geo_satellites.csv (1 строк)
+2026-05-06 13:37:55,906 [INFO] src.csv_exporter: CSV сохранён: 2_equipment.csv (1 строк)
+2026-05-06 13:37:55,912 [INFO] src.csv_exporter: CSV сохранён: 2_regulatory.csv (1 строк)
+2026-05-06 13:37:55,915 [INFO] src.csv_exporter: CSV сохранён: 2_ventilation.csv (3 строк)
+2026-05-06 13:37:55,917 [INFO] src.csv_exporter: CSV сохранён: 2_sensor_ch4.csv (8 строк)
+2026-05-06 13:37:55,931 [INFO] src.csv_exporter: CSV сохранён: 2_pressure.csv (48 строк)
+2026-05-06 13:37:55,934 [INFO] src.csv_exporter: CSV сохранён: 2_ch4_floor.csv (60 строк)
+2026-05-06 13:37:55,937 [INFO] src.csv_exporter: CSV сохранён: 2_ch4_mid.csv (9 строк)
+2026-05-06 13:37:55,941 [INFO] src.csv_exporter: CSV сохранён: 2_seismic.csv (8 строк)
+2026-05-06 13:37:55,944 [INFO] src.csv_exporter: CSV сохранён: 2_premise_vent_shaft.csv (1 строк)
+2026-05-06 13:37:55,944 [INFO] src.report_manager: [Шаг 6] Обработка данных (ETL: пивот, разбиение CH4, расчёт предикатов)...
+2026-05-06 13:37:55,949 [INFO] src.data_processor: Вентиляция обработана: 3 записей
+2026-05-06 13:37:55,986 [INFO] src.data_processor: Пивот давления построен: 24 часов
+2026-05-06 13:37:55,990 [INFO] src.data_processor: CH4 разбит на 3 колонки по 20 строк
+2026-05-06 13:37:56,007 [INFO] src.report_manager: [Шаг 7] Формирование шаблонных фраз...
+2026-05-06 13:37:56,011 [INFO] src.phrase_builder: Сформировано 8 шаблонных фраз
+2026-05-06 13:37:56,011 [INFO] src.report_manager: [Шаг 8] Сборка контекста шаблона...
+2026-05-06 13:37:56,039 [INFO] src.context_builder: Контекст собран: 51 ключей
+2026-05-06 13:37:56,039 [INFO] src.report_manager: [Шаг 9] Рендеринг Word-шаблона (docxtpl)...
+2026-05-06 13:37:56,707 [INFO] src.report_generator: Отчёт сохранён: output\reports\report_2_20260506_133756.docx
+2026-05-06 13:37:56,707 [INFO] src.report_manager: [Шаг 10] Отчёт готов: report_2_20260506_133756.docx
+2026-05-06 19:14:20,621 [ERROR] asyncio: Exception in callback _ProactorBasePipeTransport._call_connection_lost()
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost()>
+Traceback (most recent call last):
+  File "C:\Users\79779\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79779\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
+2026-05-07 01:04:48,996 [ERROR] asyncio: Exception in callback _ProactorBasePipeTransport._call_connection_lost()
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost()>
+Traceback (most recent call last):
+  File "C:\Users\79779\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79779\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
+2026-05-07 01:04:49,555 [ERROR] asyncio: Exception in callback _ProactorBasePipeTransport._call_connection_lost()
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost()>
+Traceback (most recent call last):
+  File "C:\Users\79779\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79779\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
+2026-05-10 18:29:06,221 [INFO] src.database_connector: Подключение к SQLite: incident_db.sqlite
+2026-05-10 18:29:06,224 [INFO] src.database_connector: SQLite: соединение установлено
+2026-05-10 18:29:06,227 [INFO] src.database_connector: Соединение с БД закрыто
+2026-05-10 18:29:06,235 [INFO] src.report_manager: [Шаг 3] Подключение к БД и проверка инцидента...
+2026-05-10 18:29:06,236 [INFO] src.database_connector: Подключение к SQLite: incident_db.sqlite
+2026-05-10 18:29:06,238 [INFO] src.database_connector: SQLite: соединение установлено
+2026-05-10 18:29:06,242 [INFO] src.database_connector: Соединение с БД закрыто
+2026-05-10 18:29:06,242 [INFO] src.report_manager: Инцидент найден: 2022-06-07, шахта: sar_mine
+2026-05-10 18:29:06,243 [INFO] src.report_manager: [Шаг 4] Извлечение данных из БД (SQL-запросы)...
+2026-05-10 18:29:06,244 [INFO] src.database_connector: Подключение к SQLite: incident_db.sqlite
+2026-05-10 18:29:06,245 [INFO] src.database_connector: SQLite: соединение установлено
+2026-05-10 18:29:06,254 [INFO] src.query_executor: Запрос [premise]: 1 строк
+2026-05-10 18:29:06,256 [INFO] src.query_executor: Запрос [company]: 0 строк
+2026-05-10 18:29:06,259 [INFO] src.query_executor: Запрос [geo_working]: 1 строк
+2026-05-10 18:29:06,264 [INFO] src.query_executor: Запрос [geo_satellites]: 0 строк
+2026-05-10 18:29:06,269 [INFO] src.query_executor: Запрос [equipment]: 1 строк
+2026-05-10 18:29:06,272 [INFO] src.query_executor: Запрос [regulatory]: 1 строк
+2026-05-10 18:29:06,274 [INFO] src.query_executor: Запрос [ventilation]: 3 строк
+2026-05-10 18:29:06,276 [INFO] src.query_executor: Запрос [sensor_ch4]: 7 строк
+2026-05-10 18:29:06,278 [INFO] src.query_executor: Запрос [pressure]: 48 строк
+2026-05-10 18:29:06,280 [INFO] src.query_executor: Запрос [ch4_floor]: 55 строк
+2026-05-10 18:29:06,282 [INFO] src.query_executor: Запрос [ch4_mid]: 9 строк
+2026-05-10 18:29:06,284 [INFO] src.query_executor: Запрос [seismic]: 7 строк
+2026-05-10 18:29:06,286 [INFO] src.query_executor: Запрос [premise_vent_shaft]: 1 строк
+2026-05-10 18:29:06,287 [INFO] src.database_connector: Соединение с БД закрыто
+2026-05-10 18:29:06,287 [INFO] src.report_manager: [Шаг 5] Сохранение промежуточных данных в CSV...
+2026-05-10 18:29:06,360 [INFO] src.csv_exporter: CSV сохранён: 3_premise.csv (1 строк)
+2026-05-10 18:29:06,363 [INFO] src.csv_exporter: CSV сохранён: 3_company.csv (0 строк)
+2026-05-10 18:29:06,366 [INFO] src.csv_exporter: CSV сохранён: 3_geo_working.csv (1 строк)
+2026-05-10 18:29:06,370 [INFO] src.csv_exporter: CSV сохранён: 3_geo_satellites.csv (0 строк)
+2026-05-10 18:29:06,372 [INFO] src.csv_exporter: CSV сохранён: 3_equipment.csv (1 строк)
+2026-05-10 18:29:06,374 [INFO] src.csv_exporter: CSV сохранён: 3_regulatory.csv (1 строк)
+2026-05-10 18:29:06,379 [INFO] src.csv_exporter: CSV сохранён: 3_ventilation.csv (3 строк)
+2026-05-10 18:29:06,382 [INFO] src.csv_exporter: CSV сохранён: 3_sensor_ch4.csv (7 строк)
+2026-05-10 18:29:06,389 [INFO] src.csv_exporter: CSV сохранён: 3_pressure.csv (48 строк)
+2026-05-10 18:29:06,392 [INFO] src.csv_exporter: CSV сохранён: 3_ch4_floor.csv (55 строк)
+2026-05-10 18:29:06,395 [INFO] src.csv_exporter: CSV сохранён: 3_ch4_mid.csv (9 строк)
+2026-05-10 18:29:06,398 [INFO] src.csv_exporter: CSV сохранён: 3_seismic.csv (7 строк)
+2026-05-10 18:29:06,402 [INFO] src.csv_exporter: CSV сохранён: 3_premise_vent_shaft.csv (1 строк)
+2026-05-10 18:29:06,402 [INFO] src.report_manager: [Шаг 6] Обработка данных (ETL: пивот, разбиение CH4, расчёт предикатов)...
+2026-05-10 18:29:06,409 [INFO] src.data_processor: Вентиляция обработана: 3 записей
+2026-05-10 18:29:06,478 [INFO] src.data_processor: Пивот давления построен: 24 часов
+2026-05-10 18:29:06,489 [INFO] src.data_processor: CH4 разбит на 3 колонки по 19 строк
+2026-05-10 18:29:06,541 [INFO] src.report_manager: [Шаг 7] Формирование шаблонных фраз...
+2026-05-10 18:29:06,546 [INFO] src.phrase_builder: Сформировано 8 шаблонных фраз
+2026-05-10 18:29:06,546 [INFO] src.report_manager: [Шаг 8] Сборка контекста шаблона...
+2026-05-10 18:29:06,579 [INFO] src.context_builder: Контекст собран: 51 ключей
+2026-05-10 18:29:06,580 [INFO] src.report_manager: [Шаг 9] Рендеринг Word-шаблона (docxtpl)...
+2026-05-10 18:29:07,495 [INFO] src.report_generator: Отчёт сохранён: output\reports\report_3_20260510_182906.docx
+2026-05-10 18:29:07,495 [INFO] src.report_manager: [Шаг 10] Отчёт готов: report_3_20260510_182906.docx
+2026-05-13 13:45:48,872 [INFO] src.database_connector: Подключение к SQLite: incident_db.sqlite
+2026-05-13 13:45:48,875 [INFO] src.database_connector: SQLite: соединение установлено
+2026-05-13 13:45:48,881 [INFO] src.database_connector: Соединение с БД закрыто
+2026-05-13 13:45:48,895 [INFO] src.report_manager: [Шаг 3] Подключение к БД и проверка инцидента...
+2026-05-13 13:45:48,896 [INFO] src.database_connector: Подключение к SQLite: incident_db.sqlite
+2026-05-13 13:45:48,897 [INFO] src.database_connector: SQLite: соединение установлено
+2026-05-13 13:45:48,900 [INFO] src.database_connector: Соединение с БД закрыто
+2026-05-13 13:45:48,901 [INFO] src.report_manager: Инцидент найден: 2023-10-29, шахта: 48k3z
+2026-05-13 13:45:48,901 [INFO] src.report_manager: [Шаг 4] Извлечение данных из БД (SQL-запросы)...
+2026-05-13 13:45:48,902 [INFO] src.database_connector: Подключение к SQLite: incident_db.sqlite
+2026-05-13 13:45:48,903 [INFO] src.database_connector: SQLite: соединение установлено
+2026-05-13 13:45:48,918 [INFO] src.query_executor: Запрос [premise]: 1 строк
+2026-05-13 13:45:48,922 [INFO] src.query_executor: Запрос [company]: 0 строк
+2026-05-13 13:45:48,924 [INFO] src.query_executor: Запрос [geo_working]: 1 строк
+2026-05-13 13:45:48,928 [INFO] src.query_executor: Запрос [geo_satellites]: 3 строк
+2026-05-13 13:45:48,931 [INFO] src.query_executor: Запрос [equipment]: 1 строк
+2026-05-13 13:45:48,933 [INFO] src.query_executor: Запрос [regulatory]: 1 строк
+2026-05-13 13:45:48,934 [INFO] src.query_executor: Запрос [ventilation]: 3 строк
+2026-05-13 13:45:48,935 [INFO] src.query_executor: Запрос [sensor_ch4]: 9 строк
+2026-05-13 13:45:48,937 [INFO] src.query_executor: Запрос [pressure]: 43 строк
+2026-05-13 13:45:48,938 [INFO] src.query_executor: Запрос [ch4_floor]: 72 строк
+2026-05-13 13:45:48,939 [INFO] src.query_executor: Запрос [ch4_mid]: 9 строк
+2026-05-13 13:45:48,942 [INFO] src.query_executor: Запрос [seismic]: 12 строк
+2026-05-13 13:45:48,943 [INFO] src.query_executor: Запрос [premise_vent_shaft]: 1 строк
+2026-05-13 13:45:48,944 [INFO] src.database_connector: Соединение с БД закрыто
+2026-05-13 13:45:48,944 [INFO] src.report_manager: [Шаг 5] Сохранение промежуточных данных в CSV...
+2026-05-13 13:45:49,008 [INFO] src.csv_exporter: CSV сохранён: 1_premise.csv (1 строк)
+2026-05-13 13:45:49,014 [INFO] src.csv_exporter: CSV сохранён: 1_company.csv (0 строк)
+2026-05-13 13:45:49,018 [INFO] src.csv_exporter: CSV сохранён: 1_geo_working.csv (1 строк)
+2026-05-13 13:45:49,021 [INFO] src.csv_exporter: CSV сохранён: 1_geo_satellites.csv (3 строк)
+2026-05-13 13:45:49,024 [INFO] src.csv_exporter: CSV сохранён: 1_equipment.csv (1 строк)
+2026-05-13 13:45:49,029 [INFO] src.csv_exporter: CSV сохранён: 1_regulatory.csv (1 строк)
+2026-05-13 13:45:49,032 [INFO] src.csv_exporter: CSV сохранён: 1_ventilation.csv (3 строк)
+2026-05-13 13:45:49,034 [INFO] src.csv_exporter: CSV сохранён: 1_sensor_ch4.csv (9 строк)
+2026-05-13 13:45:49,037 [INFO] src.csv_exporter: CSV сохранён: 1_pressure.csv (43 строк)
+2026-05-13 13:45:49,041 [INFO] src.csv_exporter: CSV сохранён: 1_ch4_floor.csv (72 строк)
+2026-05-13 13:45:49,044 [INFO] src.csv_exporter: CSV сохранён: 1_ch4_mid.csv (9 строк)
+2026-05-13 13:45:49,046 [INFO] src.csv_exporter: CSV сохранён: 1_seismic.csv (12 строк)
+2026-05-13 13:45:49,050 [INFO] src.csv_exporter: CSV сохранён: 1_premise_vent_shaft.csv (1 строк)
+2026-05-13 13:45:49,051 [INFO] src.report_manager: [Шаг 6] Обработка данных (ETL: пивот, разбиение CH4, расчёт предикатов)...
+2026-05-13 13:45:49,057 [INFO] src.data_processor: Вентиляция обработана: 3 записей
+2026-05-13 13:45:49,127 [INFO] src.data_processor: Пивот давления построен: 24 часов
+2026-05-13 13:45:49,135 [INFO] src.data_processor: CH4 разбит на 3 колонки по 24 строк
+2026-05-13 13:45:49,168 [INFO] src.report_manager: [Шаг 7] Формирование шаблонных фраз...
+2026-05-13 13:45:49,172 [INFO] src.phrase_builder: Сформировано 8 шаблонных фраз
+2026-05-13 13:45:49,173 [INFO] src.report_manager: [Шаг 8] Сборка контекста шаблона...
+2026-05-13 13:45:49,214 [INFO] src.context_builder: Контекст собран: 51 ключей
+2026-05-13 13:45:49,215 [INFO] src.report_manager: [Шаг 9] Рендеринг Word-шаблона (docxtpl)...
+2026-05-13 13:45:50,027 [INFO] src.report_generator: Отчёт сохранён: output\reports\report_1_20260513_134549.docx
+2026-05-13 13:45:50,028 [INFO] src.report_manager: [Шаг 10] Отчёт готов: report_1_20260513_134549.docx
+2026-05-13 13:47:24,352 [INFO] src.database_connector: Подключение к SQLite: incident_db.sqlite
+2026-05-13 13:47:24,354 [INFO] src.database_connector: SQLite: соединение установлено
+2026-05-13 13:47:24,357 [INFO] src.database_connector: Соединение с БД закрыто
+2026-05-13 13:47:24,365 [INFO] src.report_manager: [Шаг 3] Подключение к БД и проверка инцидента...
+2026-05-13 13:47:24,366 [INFO] src.database_connector: Подключение к SQLite: incident_db.sqlite
+2026-05-13 13:47:24,366 [INFO] src.database_connector: SQLite: соединение установлено
+2026-05-13 13:47:24,370 [INFO] src.database_connector: Соединение с БД закрыто
+2026-05-13 13:47:24,371 [INFO] src.report_manager: Инцидент найден: 2023-10-29, шахта: 48k3z
+2026-05-13 13:47:24,371 [INFO] src.report_manager: [Шаг 4] Извлечение данных из БД (SQL-запросы)...
+2026-05-13 13:47:24,372 [INFO] src.database_connector: Подключение к SQLite: incident_db.sqlite
+2026-05-13 13:47:24,373 [INFO] src.database_connector: SQLite: соединение установлено
+2026-05-13 13:47:24,375 [INFO] src.query_executor: Запрос [premise]: 1 строк
+2026-05-13 13:47:24,377 [INFO] src.query_executor: Запрос [company]: 0 строк
+2026-05-13 13:47:24,378 [INFO] src.query_executor: Запрос [geo_working]: 1 строк
+2026-05-13 13:47:24,380 [INFO] src.query_executor: Запрос [geo_satellites]: 3 строк
+2026-05-13 13:47:24,382 [INFO] src.query_executor: Запрос [equipment]: 1 строк
+2026-05-13 13:47:24,383 [INFO] src.query_executor: Запрос [regulatory]: 1 строк
+2026-05-13 13:47:24,385 [INFO] src.query_executor: Запрос [ventilation]: 3 строк
+2026-05-13 13:47:24,388 [INFO] src.query_executor: Запрос [sensor_ch4]: 9 строк
+2026-05-13 13:47:24,391 [INFO] src.query_executor: Запрос [pressure]: 43 строк
+2026-05-13 13:47:24,393 [INFO] src.query_executor: Запрос [ch4_floor]: 72 строк
+2026-05-13 13:47:24,395 [INFO] src.query_executor: Запрос [ch4_mid]: 9 строк
+2026-05-13 13:47:24,396 [INFO] src.query_executor: Запрос [seismic]: 12 строк
+2026-05-13 13:47:24,397 [INFO] src.query_executor: Запрос [premise_vent_shaft]: 1 строк
+2026-05-13 13:47:24,398 [INFO] src.database_connector: Соединение с БД закрыто
+2026-05-13 13:47:24,398 [INFO] src.report_manager: [Шаг 5] Сохранение промежуточных данных в CSV...
+2026-05-13 13:47:24,403 [INFO] src.csv_exporter: CSV сохранён: 1_premise.csv (1 строк)
+2026-05-13 13:47:24,406 [INFO] src.csv_exporter: CSV сохранён: 1_company.csv (0 строк)
+2026-05-13 13:47:24,409 [INFO] src.csv_exporter: CSV сохранён: 1_geo_working.csv (1 строк)
+2026-05-13 13:47:24,413 [INFO] src.csv_exporter: CSV сохранён: 1_geo_satellites.csv (3 строк)
+2026-05-13 13:47:24,419 [INFO] src.csv_exporter: CSV сохранён: 1_equipment.csv (1 строк)
+2026-05-13 13:47:24,423 [INFO] src.csv_exporter: CSV сохранён: 1_regulatory.csv (1 строк)
+2026-05-13 13:47:24,427 [INFO] src.csv_exporter: CSV сохранён: 1_ventilation.csv (3 строк)
+2026-05-13 13:47:24,429 [INFO] src.csv_exporter: CSV сохранён: 1_sensor_ch4.csv (9 строк)
+2026-05-13 13:47:24,432 [INFO] src.csv_exporter: CSV сохранён: 1_pressure.csv (43 строк)
+2026-05-13 13:47:24,436 [INFO] src.csv_exporter: CSV сохранён: 1_ch4_floor.csv (72 строк)
+2026-05-13 13:47:24,440 [INFO] src.csv_exporter: CSV сохранён: 1_ch4_mid.csv (9 строк)
+2026-05-13 13:47:24,445 [INFO] src.csv_exporter: CSV сохранён: 1_seismic.csv (12 строк)
+2026-05-13 13:47:24,447 [INFO] src.csv_exporter: CSV сохранён: 1_premise_vent_shaft.csv (1 строк)
+2026-05-13 13:47:24,447 [INFO] src.report_manager: [Шаг 6] Обработка данных (ETL: пивот, разбиение CH4, расчёт предикатов)...
+2026-05-13 13:47:24,450 [INFO] src.data_processor: Вентиляция обработана: 3 записей
+2026-05-13 13:47:24,466 [INFO] src.data_processor: Пивот давления построен: 24 часов
+2026-05-13 13:47:24,475 [INFO] src.data_processor: CH4 разбит на 3 колонки по 24 строк
+2026-05-13 13:47:24,482 [INFO] src.report_manager: [Шаг 7] Формирование шаблонных фраз...
+2026-05-13 13:47:24,486 [INFO] src.phrase_builder: Сформировано 8 шаблонных фраз
+2026-05-13 13:47:24,487 [INFO] src.report_manager: [Шаг 8] Сборка контекста шаблона...
+2026-05-13 13:47:24,513 [INFO] src.context_builder: Контекст собран: 51 ключей
+2026-05-13 13:47:24,513 [INFO] src.report_manager: [Шаг 9] Рендеринг Word-шаблона (docxtpl)...
+2026-05-13 13:47:24,710 [INFO] src.report_generator: Отчёт сохранён: output\reports\report_1_20260513_134724.docx
+2026-05-13 13:47:24,710 [INFO] src.report_manager: [Шаг 10] Отчёт готов: report_1_20260513_134724.docx
+2026-05-13 13:48:45,079 [INFO] src.database_connector: Подключение к SQLite: incident_db.sqlite
+2026-05-13 13:48:45,081 [INFO] src.database_connector: SQLite: соединение установлено
+2026-05-13 13:48:45,083 [INFO] src.database_connector: Соединение с БД закрыто
+2026-05-13 13:48:45,087 [INFO] src.report_manager: [Шаг 3] Подключение к БД и проверка инцидента...
+2026-05-13 13:48:45,088 [INFO] src.database_connector: Подключение к SQLite: incident_db.sqlite
+2026-05-13 13:48:45,089 [INFO] src.database_connector: SQLite: соединение установлено
+2026-05-13 13:48:45,092 [INFO] src.database_connector: Соединение с БД закрыто
+2026-05-13 13:48:45,094 [INFO] src.report_manager: Инцидент найден: 2023-10-29, шахта: 48k3z
+2026-05-13 13:48:45,095 [INFO] src.report_manager: [Шаг 4] Извлечение данных из БД (SQL-запросы)...
+2026-05-13 13:48:45,096 [INFO] src.database_connector: Подключение к SQLite: incident_db.sqlite
+2026-05-13 13:48:45,097 [INFO] src.database_connector: SQLite: соединение установлено
+2026-05-13 13:48:45,102 [INFO] src.query_executor: Запрос [premise]: 1 строк
+2026-05-13 13:48:45,104 [INFO] src.query_executor: Запрос [company]: 0 строк
+2026-05-13 13:48:45,106 [INFO] src.query_executor: Запрос [geo_working]: 1 строк
+2026-05-13 13:48:45,107 [INFO] src.query_executor: Запрос [geo_satellites]: 3 строк
+2026-05-13 13:48:45,108 [INFO] src.query_executor: Запрос [equipment]: 1 строк
+2026-05-13 13:48:45,111 [INFO] src.query_executor: Запрос [regulatory]: 1 строк
+2026-05-13 13:48:45,116 [INFO] src.query_executor: Запрос [ventilation]: 3 строк
+2026-05-13 13:48:45,117 [INFO] src.query_executor: Запрос [sensor_ch4]: 9 строк
+2026-05-13 13:48:45,119 [INFO] src.query_executor: Запрос [pressure]: 43 строк
+2026-05-13 13:48:45,121 [INFO] src.query_executor: Запрос [ch4_floor]: 72 строк
+2026-05-13 13:48:45,122 [INFO] src.query_executor: Запрос [ch4_mid]: 9 строк
+2026-05-13 13:48:45,123 [INFO] src.query_executor: Запрос [seismic]: 12 строк
+2026-05-13 13:48:45,125 [INFO] src.query_executor: Запрос [premise_vent_shaft]: 1 строк
+2026-05-13 13:48:45,125 [INFO] src.database_connector: Соединение с БД закрыто
+2026-05-13 13:48:45,126 [INFO] src.report_manager: [Шаг 5] Сохранение промежуточных данных в CSV...
+2026-05-13 13:48:45,133 [INFO] src.csv_exporter: CSV сохранён: 1_premise.csv (1 строк)
+2026-05-13 13:48:45,135 [INFO] src.csv_exporter: CSV сохранён: 1_company.csv (0 строк)
+2026-05-13 13:48:45,138 [INFO] src.csv_exporter: CSV сохранён: 1_geo_working.csv (1 строк)
+2026-05-13 13:48:45,140 [INFO] src.csv_exporter: CSV сохранён: 1_geo_satellites.csv (3 строк)
+2026-05-13 13:48:45,144 [INFO] src.csv_exporter: CSV сохранён: 1_equipment.csv (1 строк)
+2026-05-13 13:48:45,148 [INFO] src.csv_exporter: CSV сохранён: 1_regulatory.csv (1 строк)
+2026-05-13 13:48:45,150 [INFO] src.csv_exporter: CSV сохранён: 1_ventilation.csv (3 строк)
+2026-05-13 13:48:45,153 [INFO] src.csv_exporter: CSV сохранён: 1_sensor_ch4.csv (9 строк)
+2026-05-13 13:48:45,155 [INFO] src.csv_exporter: CSV сохранён: 1_pressure.csv (43 строк)
+2026-05-13 13:48:45,159 [INFO] src.csv_exporter: CSV сохранён: 1_ch4_floor.csv (72 строк)
+2026-05-13 13:48:45,164 [INFO] src.csv_exporter: CSV сохранён: 1_ch4_mid.csv (9 строк)
+2026-05-13 13:48:45,167 [INFO] src.csv_exporter: CSV сохранён: 1_seismic.csv (12 строк)
+2026-05-13 13:48:45,169 [INFO] src.csv_exporter: CSV сохранён: 1_premise_vent_shaft.csv (1 строк)
+2026-05-13 13:48:45,169 [INFO] src.report_manager: [Шаг 6] Обработка данных (ETL: пивот, разбиение CH4, расчёт предикатов)...
+2026-05-13 13:48:45,173 [INFO] src.data_processor: Вентиляция обработана: 3 записей
+2026-05-13 13:48:45,187 [INFO] src.data_processor: Пивот давления построен: 24 часов
+2026-05-13 13:48:45,194 [INFO] src.data_processor: CH4 разбит на 3 колонки по 24 строк
+2026-05-13 13:48:45,203 [INFO] src.report_manager: [Шаг 7] Формирование шаблонных фраз...
+2026-05-13 13:48:45,206 [INFO] src.phrase_builder: Сформировано 8 шаблонных фраз
+2026-05-13 13:48:45,207 [INFO] src.report_manager: [Шаг 8] Сборка контекста шаблона...
+2026-05-13 13:48:45,234 [INFO] src.context_builder: Контекст собран: 51 ключей
+2026-05-13 13:48:45,234 [INFO] src.report_manager: [Шаг 9] Рендеринг Word-шаблона (docxtpl)...
+2026-05-13 13:48:45,437 [INFO] src.report_generator: Отчёт сохранён: output\reports\report_1_20260513_134845.docx
+2026-05-13 13:48:45,437 [INFO] src.report_manager: [Шаг 10] Отчёт готов: report_1_20260513_134845.docx
+2026-05-13 13:48:47,687 [INFO] src.database_connector: Подключение к SQLite: incident_db.sqlite
+2026-05-13 13:48:47,688 [INFO] src.database_connector: SQLite: соединение установлено
+2026-05-13 13:48:47,690 [INFO] src.database_connector: Соединение с БД закрыто
+2026-05-13 13:48:47,695 [INFO] src.report_manager: [Шаг 3] Подключение к БД и проверка инцидента...
+2026-05-13 13:48:47,696 [INFO] src.database_connector: Подключение к SQLite: incident_db.sqlite
+2026-05-13 13:48:47,698 [INFO] src.database_connector: SQLite: соединение установлено
+2026-05-13 13:48:47,703 [INFO] src.database_connector: Соединение с БД закрыто
+2026-05-13 13:48:47,704 [INFO] src.report_manager: Инцидент найден: 2023-10-29, шахта: 48k3z
+2026-05-13 13:48:47,704 [INFO] src.report_manager: [Шаг 4] Извлечение данных из БД (SQL-запросы)...
+2026-05-13 13:48:47,705 [INFO] src.database_connector: Подключение к SQLite: incident_db.sqlite
+2026-05-13 13:48:47,706 [INFO] src.database_connector: SQLite: соединение установлено
+2026-05-13 13:48:47,709 [INFO] src.query_executor: Запрос [premise]: 1 строк
+2026-05-13 13:48:47,711 [INFO] src.query_executor: Запрос [company]: 0 строк
+2026-05-13 13:48:47,713 [INFO] src.query_executor: Запрос [geo_working]: 1 строк
+2026-05-13 13:48:47,715 [INFO] src.query_executor: Запрос [geo_satellites]: 3 строк
+2026-05-13 13:48:47,719 [INFO] src.query_executor: Запрос [equipment]: 1 строк
+2026-05-13 13:48:47,720 [INFO] src.query_executor: Запрос [regulatory]: 1 строк
+2026-05-13 13:48:47,722 [INFO] src.query_executor: Запрос [ventilation]: 3 строк
+2026-05-13 13:48:47,725 [INFO] src.query_executor: Запрос [sensor_ch4]: 9 строк
+2026-05-13 13:48:47,726 [INFO] src.query_executor: Запрос [pressure]: 43 строк
+2026-05-13 13:48:47,728 [INFO] src.query_executor: Запрос [ch4_floor]: 72 строк
+2026-05-13 13:48:47,730 [INFO] src.query_executor: Запрос [ch4_mid]: 9 строк
+2026-05-13 13:48:47,732 [INFO] src.query_executor: Запрос [seismic]: 12 строк
+2026-05-13 13:48:47,734 [INFO] src.query_executor: Запрос [premise_vent_shaft]: 1 строк
+2026-05-13 13:48:47,735 [INFO] src.database_connector: Соединение с БД закрыто
+2026-05-13 13:48:47,735 [INFO] src.report_manager: [Шаг 5] Сохранение промежуточных данных в CSV...
+2026-05-13 13:48:47,739 [INFO] src.csv_exporter: CSV сохранён: 1_premise.csv (1 строк)
+2026-05-13 13:48:47,741 [INFO] src.csv_exporter: CSV сохранён: 1_company.csv (0 строк)
+2026-05-13 13:48:47,744 [INFO] src.csv_exporter: CSV сохранён: 1_geo_working.csv (1 строк)
+2026-05-13 13:48:47,748 [INFO] src.csv_exporter: CSV сохранён: 1_geo_satellites.csv (3 строк)
+2026-05-13 13:48:47,751 [INFO] src.csv_exporter: CSV сохранён: 1_equipment.csv (1 строк)
+2026-05-13 13:48:47,754 [INFO] src.csv_exporter: CSV сохранён: 1_regulatory.csv (1 строк)
+2026-05-13 13:48:47,756 [INFO] src.csv_exporter: CSV сохранён: 1_ventilation.csv (3 строк)
+2026-05-13 13:48:47,762 [INFO] src.csv_exporter: CSV сохранён: 1_sensor_ch4.csv (9 строк)
+2026-05-13 13:48:47,765 [INFO] src.csv_exporter: CSV сохранён: 1_pressure.csv (43 строк)
+2026-05-13 13:48:47,767 [INFO] src.csv_exporter: CSV сохранён: 1_ch4_floor.csv (72 строк)
+2026-05-13 13:48:47,771 [INFO] src.csv_exporter: CSV сохранён: 1_ch4_mid.csv (9 строк)
+2026-05-13 13:48:47,774 [INFO] src.csv_exporter: CSV сохранён: 1_seismic.csv (12 строк)
+2026-05-13 13:48:47,778 [INFO] src.csv_exporter: CSV сохранён: 1_premise_vent_shaft.csv (1 строк)
+2026-05-13 13:48:47,778 [INFO] src.report_manager: [Шаг 6] Обработка данных (ETL: пивот, разбиение CH4, расчёт предикатов)...
+2026-05-13 13:48:47,782 [INFO] src.data_processor: Вентиляция обработана: 3 записей
+2026-05-13 13:48:47,796 [INFO] src.data_processor: Пивот давления построен: 24 часов
+2026-05-13 13:48:47,803 [INFO] src.data_processor: CH4 разбит на 3 колонки по 24 строк
+2026-05-13 13:48:47,815 [INFO] src.report_manager: [Шаг 7] Формирование шаблонных фраз...
+2026-05-13 13:48:47,819 [INFO] src.phrase_builder: Сформировано 8 шаблонных фраз
+2026-05-13 13:48:47,820 [INFO] src.report_manager: [Шаг 8] Сборка контекста шаблона...
+2026-05-13 13:48:47,855 [INFO] src.context_builder: Контекст собран: 51 ключей
+2026-05-13 13:48:47,856 [INFO] src.report_manager: [Шаг 9] Рендеринг Word-шаблона (docxtpl)...
+2026-05-13 13:48:48,093 [INFO] src.report_generator: Отчёт сохранён: output\reports\report_1_20260513_134847.docx
+2026-05-13 13:48:48,093 [INFO] src.report_manager: [Шаг 10] Отчёт готов: report_1_20260513_134847.docx
+2026-05-13 13:48:48,825 [INFO] src.database_connector: Подключение к SQLite: incident_db.sqlite
+2026-05-13 13:48:48,826 [INFO] src.database_connector: SQLite: соединение установлено
+2026-05-13 13:48:48,829 [INFO] src.database_connector: Соединение с БД закрыто
+2026-05-13 13:48:48,835 [INFO] src.report_manager: [Шаг 3] Подключение к БД и проверка инцидента...
+2026-05-13 13:48:48,838 [INFO] src.database_connector: Подключение к SQLite: incident_db.sqlite
+2026-05-13 13:48:48,839 [INFO] src.database_connector: SQLite: соединение установлено
+2026-05-13 13:48:48,842 [INFO] src.database_connector: Соединение с БД закрыто
+2026-05-13 13:48:48,843 [INFO] src.report_manager: Инцидент найден: 2023-10-29, шахта: 48k3z
+2026-05-13 13:48:48,843 [INFO] src.report_manager: [Шаг 4] Извлечение данных из БД (SQL-запросы)...
+2026-05-13 13:48:48,844 [INFO] src.database_connector: Подключение к SQLite: incident_db.sqlite
+2026-05-13 13:48:48,845 [INFO] src.database_connector: SQLite: соединение установлено
+2026-05-13 13:48:48,849 [INFO] src.query_executor: Запрос [premise]: 1 строк
+2026-05-13 13:48:48,850 [INFO] src.query_executor: Запрос [company]: 0 строк
+2026-05-13 13:48:48,854 [INFO] src.query_executor: Запрос [geo_working]: 1 строк
+2026-05-13 13:48:48,857 [INFO] src.query_executor: Запрос [geo_satellites]: 3 строк
+2026-05-13 13:48:48,859 [INFO] src.query_executor: Запрос [equipment]: 1 строк
+2026-05-13 13:48:48,860 [INFO] src.query_executor: Запрос [regulatory]: 1 строк
+2026-05-13 13:48:48,861 [INFO] src.query_executor: Запрос [ventilation]: 3 строк
+2026-05-13 13:48:48,863 [INFO] src.query_executor: Запрос [sensor_ch4]: 9 строк
+2026-05-13 13:48:48,864 [INFO] src.query_executor: Запрос [pressure]: 43 строк
+2026-05-13 13:48:48,865 [INFO] src.query_executor: Запрос [ch4_floor]: 72 строк
+2026-05-13 13:48:48,866 [INFO] src.query_executor: Запрос [ch4_mid]: 9 строк
+2026-05-13 13:48:48,868 [INFO] src.query_executor: Запрос [seismic]: 12 строк
+2026-05-13 13:48:48,869 [INFO] src.query_executor: Запрос [premise_vent_shaft]: 1 строк
+2026-05-13 13:48:48,869 [INFO] src.database_connector: Соединение с БД закрыто
+2026-05-13 13:48:48,870 [INFO] src.report_manager: [Шаг 5] Сохранение промежуточных данных в CSV...
+2026-05-13 13:48:48,875 [INFO] src.csv_exporter: CSV сохранён: 1_premise.csv (1 строк)
+2026-05-13 13:48:48,877 [INFO] src.csv_exporter: CSV сохранён: 1_company.csv (0 строк)
+2026-05-13 13:48:48,881 [INFO] src.csv_exporter: CSV сохранён: 1_geo_working.csv (1 строк)
+2026-05-13 13:48:48,884 [INFO] src.csv_exporter: CSV сохранён: 1_geo_satellites.csv (3 строк)
+2026-05-13 13:48:48,887 [INFO] src.csv_exporter: CSV сохранён: 1_equipment.csv (1 строк)
+2026-05-13 13:48:48,890 [INFO] src.csv_exporter: CSV сохранён: 1_regulatory.csv (1 строк)
+2026-05-13 13:48:48,895 [INFO] src.csv_exporter: CSV сохранён: 1_ventilation.csv (3 строк)
+2026-05-13 13:48:48,898 [INFO] src.csv_exporter: CSV сохранён: 1_sensor_ch4.csv (9 строк)
+2026-05-13 13:48:48,901 [INFO] src.csv_exporter: CSV сохранён: 1_pressure.csv (43 строк)
+2026-05-13 13:48:48,904 [INFO] src.csv_exporter: CSV сохранён: 1_ch4_floor.csv (72 строк)
+2026-05-13 13:48:48,907 [INFO] src.csv_exporter: CSV сохранён: 1_ch4_mid.csv (9 строк)
+2026-05-13 13:48:48,912 [INFO] src.csv_exporter: CSV сохранён: 1_seismic.csv (12 строк)
+2026-05-13 13:48:48,915 [INFO] src.csv_exporter: CSV сохранён: 1_premise_vent_shaft.csv (1 строк)
+2026-05-13 13:48:48,915 [INFO] src.report_manager: [Шаг 6] Обработка данных (ETL: пивот, разбиение CH4, расчёт предикатов)...
+2026-05-13 13:48:48,919 [INFO] src.data_processor: Вентиляция обработана: 3 записей
+2026-05-13 13:48:48,937 [INFO] src.data_processor: Пивот давления построен: 24 часов
+2026-05-13 13:48:48,946 [INFO] src.data_processor: CH4 разбит на 3 колонки по 24 строк
+2026-05-13 13:48:48,955 [INFO] src.report_manager: [Шаг 7] Формирование шаблонных фраз...
+2026-05-13 13:48:48,962 [INFO] src.phrase_builder: Сформировано 8 шаблонных фраз
+2026-05-13 13:48:48,962 [INFO] src.report_manager: [Шаг 8] Сборка контекста шаблона...
+2026-05-13 13:48:49,000 [INFO] src.context_builder: Контекст собран: 51 ключей
+2026-05-13 13:48:49,001 [INFO] src.report_manager: [Шаг 9] Рендеринг Word-шаблона (docxtpl)...
+2026-05-13 13:48:49,203 [INFO] src.report_generator: Отчёт сохранён: output\reports\report_1_20260513_134849.docx
+2026-05-13 13:48:49,204 [INFO] src.report_manager: [Шаг 10] Отчёт готов: report_1_20260513_134849.docx
+2026-05-13 13:48:55,404 [INFO] src.database_connector: Подключение к SQLite: incident_db.sqlite
+2026-05-13 13:48:55,405 [INFO] src.database_connector: SQLite: соединение установлено
+2026-05-13 13:48:55,410 [INFO] src.database_connector: Соединение с БД закрыто
+2026-05-13 13:48:55,415 [INFO] src.report_manager: [Шаг 3] Подключение к БД и проверка инцидента...
+2026-05-13 13:48:55,416 [INFO] src.database_connector: Подключение к SQLite: incident_db.sqlite
+2026-05-13 13:48:55,418 [INFO] src.database_connector: SQLite: соединение установлено
+2026-05-13 13:48:55,420 [INFO] src.database_connector: Соединение с БД закрыто
+2026-05-13 13:48:55,421 [INFO] src.report_manager: Инцидент найден: 2023-10-29, шахта: 48k3z
+2026-05-13 13:48:55,421 [INFO] src.report_manager: [Шаг 4] Извлечение данных из БД (SQL-запросы)...
+2026-05-13 13:48:55,422 [INFO] src.database_connector: Подключение к SQLite: incident_db.sqlite
+2026-05-13 13:48:55,423 [INFO] src.database_connector: SQLite: соединение установлено
+2026-05-13 13:48:55,426 [INFO] src.query_executor: Запрос [premise]: 1 строк
+2026-05-13 13:48:55,428 [INFO] src.query_executor: Запрос [company]: 0 строк
+2026-05-13 13:48:55,433 [INFO] src.query_executor: Запрос [geo_working]: 1 строк
+2026-05-13 13:48:55,435 [INFO] src.query_executor: Запрос [geo_satellites]: 3 строк
+2026-05-13 13:48:55,437 [INFO] src.query_executor: Запрос [equipment]: 1 строк
+2026-05-13 13:48:55,439 [INFO] src.query_executor: Запрос [regulatory]: 1 строк
+2026-05-13 13:48:55,440 [INFO] src.query_executor: Запрос [ventilation]: 3 строк
+2026-05-13 13:48:55,442 [INFO] src.query_executor: Запрос [sensor_ch4]: 9 строк
+2026-05-13 13:48:55,444 [INFO] src.query_executor: Запрос [pressure]: 43 строк
+2026-05-13 13:48:55,445 [INFO] src.query_executor: Запрос [ch4_floor]: 72 строк
+2026-05-13 13:48:55,447 [INFO] src.query_executor: Запрос [ch4_mid]: 9 строк
+2026-05-13 13:48:55,451 [INFO] src.query_executor: Запрос [seismic]: 12 строк
+2026-05-13 13:48:55,454 [INFO] src.query_executor: Запрос [premise_vent_shaft]: 1 строк
+2026-05-13 13:48:55,455 [INFO] src.database_connector: Соединение с БД закрыто
+2026-05-13 13:48:55,455 [INFO] src.report_manager: [Шаг 5] Сохранение промежуточных данных в CSV...
+2026-05-13 13:48:55,464 [INFO] src.csv_exporter: CSV сохранён: 1_premise.csv (1 строк)
+2026-05-13 13:48:55,468 [INFO] src.csv_exporter: CSV сохранён: 1_company.csv (0 строк)
+2026-05-13 13:48:55,477 [INFO] src.csv_exporter: CSV сохранён: 1_geo_working.csv (1 строк)
+2026-05-13 13:48:55,480 [INFO] src.csv_exporter: CSV сохранён: 1_geo_satellites.csv (3 строк)
+2026-05-13 13:48:55,485 [INFO] src.csv_exporter: CSV сохранён: 1_equipment.csv (1 строк)
+2026-05-13 13:48:55,489 [INFO] src.csv_exporter: CSV сохранён: 1_regulatory.csv (1 строк)
+2026-05-13 13:48:55,495 [INFO] src.csv_exporter: CSV сохранён: 1_ventilation.csv (3 строк)
+2026-05-13 13:48:55,498 [INFO] src.csv_exporter: CSV сохранён: 1_sensor_ch4.csv (9 строк)
+2026-05-13 13:48:55,503 [INFO] src.csv_exporter: CSV сохранён: 1_pressure.csv (43 строк)
+2026-05-13 13:48:55,508 [INFO] src.csv_exporter: CSV сохранён: 1_ch4_floor.csv (72 строк)
+2026-05-13 13:48:55,511 [INFO] src.csv_exporter: CSV сохранён: 1_ch4_mid.csv (9 строк)
+2026-05-13 13:48:55,514 [INFO] src.csv_exporter: CSV сохранён: 1_seismic.csv (12 строк)
+2026-05-13 13:48:55,518 [INFO] src.csv_exporter: CSV сохранён: 1_premise_vent_shaft.csv (1 строк)
+2026-05-13 13:48:55,519 [INFO] src.report_manager: [Шаг 6] Обработка данных (ETL: пивот, разбиение CH4, расчёт предикатов)...
+2026-05-13 13:48:55,524 [INFO] src.data_processor: Вентиляция обработана: 3 записей
+2026-05-13 13:48:55,535 [INFO] src.data_processor: Пивот давления построен: 24 часов
+2026-05-13 13:48:55,540 [INFO] src.data_processor: CH4 разбит на 3 колонки по 24 строк
+2026-05-13 13:48:55,548 [INFO] src.report_manager: [Шаг 7] Формирование шаблонных фраз...
+2026-05-13 13:48:55,554 [INFO] src.phrase_builder: Сформировано 8 шаблонных фраз
+2026-05-13 13:48:55,554 [INFO] src.report_manager: [Шаг 8] Сборка контекста шаблона...
+2026-05-13 13:48:55,576 [INFO] src.context_builder: Контекст собран: 51 ключей
+2026-05-13 13:48:55,576 [INFO] src.report_manager: [Шаг 9] Рендеринг Word-шаблона (docxtpl)...
+2026-05-13 13:48:55,726 [INFO] src.report_generator: Отчёт сохранён: output\reports\report_1_20260513_134855.docx
+2026-05-13 13:48:55,727 [INFO] src.report_manager: [Шаг 10] Отчёт готов: report_1_20260513_134855.docx
+2026-05-13 13:48:59,464 [INFO] src.database_connector: Подключение к SQLite: incident_db.sqlite
+2026-05-13 13:48:59,465 [INFO] src.database_connector: SQLite: соединение установлено
+2026-05-13 13:48:59,468 [INFO] src.database_connector: Соединение с БД закрыто
+2026-05-13 13:48:59,472 [INFO] src.report_manager: [Шаг 3] Подключение к БД и проверка инцидента...
+2026-05-13 13:48:59,473 [INFO] src.database_connector: Подключение к SQLite: incident_db.sqlite
+2026-05-13 13:48:59,474 [INFO] src.database_connector: SQLite: соединение установлено
+2026-05-13 13:48:59,476 [INFO] src.database_connector: Соединение с БД закрыто
+2026-05-13 13:48:59,476 [INFO] src.report_manager: Инцидент найден: 2023-03-14, шахта: kaz_mine
+2026-05-13 13:48:59,477 [INFO] src.report_manager: [Шаг 4] Извлечение данных из БД (SQL-запросы)...
+2026-05-13 13:48:59,478 [INFO] src.database_connector: Подключение к SQLite: incident_db.sqlite
+2026-05-13 13:48:59,480 [INFO] src.database_connector: SQLite: соединение установлено
+2026-05-13 13:48:59,487 [INFO] src.query_executor: Запрос [premise]: 1 строк
+2026-05-13 13:48:59,489 [INFO] src.query_executor: Запрос [company]: 0 строк
+2026-05-13 13:48:59,491 [INFO] src.query_executor: Запрос [geo_working]: 1 строк
+2026-05-13 13:48:59,492 [INFO] src.query_executor: Запрос [geo_satellites]: 1 строк
+2026-05-13 13:48:59,495 [INFO] src.query_executor: Запрос [equipment]: 1 строк
+2026-05-13 13:48:59,498 [INFO] src.query_executor: Запрос [regulatory]: 1 строк
+2026-05-13 13:48:59,501 [INFO] src.query_executor: Запрос [ventilation]: 3 строк
+2026-05-13 13:48:59,503 [INFO] src.query_executor: Запрос [sensor_ch4]: 8 строк
+2026-05-13 13:48:59,506 [INFO] src.query_executor: Запрос [pressure]: 48 строк
+2026-05-13 13:48:59,507 [INFO] src.query_executor: Запрос [ch4_floor]: 60 строк
+2026-05-13 13:48:59,508 [INFO] src.query_executor: Запрос [ch4_mid]: 9 строк
+2026-05-13 13:48:59,509 [INFO] src.query_executor: Запрос [seismic]: 8 строк
+2026-05-13 13:48:59,510 [INFO] src.query_executor: Запрос [premise_vent_shaft]: 1 строк
+2026-05-13 13:48:59,512 [INFO] src.database_connector: Соединение с БД закрыто
+2026-05-13 13:48:59,512 [INFO] src.report_manager: [Шаг 5] Сохранение промежуточных данных в CSV...
+2026-05-13 13:48:59,520 [INFO] src.csv_exporter: CSV сохранён: 2_premise.csv (1 строк)
+2026-05-13 13:48:59,523 [INFO] src.csv_exporter: CSV сохранён: 2_company.csv (0 строк)
+2026-05-13 13:48:59,527 [INFO] src.csv_exporter: CSV сохранён: 2_geo_working.csv (1 строк)
+2026-05-13 13:48:59,534 [INFO] src.csv_exporter: CSV сохранён: 2_geo_satellites.csv (1 строк)
+2026-05-13 13:48:59,538 [INFO] src.csv_exporter: CSV сохранён: 2_equipment.csv (1 строк)
+2026-05-13 13:48:59,542 [INFO] src.csv_exporter: CSV сохранён: 2_regulatory.csv (1 строк)
+2026-05-13 13:48:59,547 [INFO] src.csv_exporter: CSV сохранён: 2_ventilation.csv (3 строк)
+2026-05-13 13:48:59,553 [INFO] src.csv_exporter: CSV сохранён: 2_sensor_ch4.csv (8 строк)
+2026-05-13 13:48:59,557 [INFO] src.csv_exporter: CSV сохранён: 2_pressure.csv (48 строк)
+2026-05-13 13:48:59,560 [INFO] src.csv_exporter: CSV сохранён: 2_ch4_floor.csv (60 строк)
+2026-05-13 13:48:59,566 [INFO] src.csv_exporter: CSV сохранён: 2_ch4_mid.csv (9 строк)
+2026-05-13 13:48:59,571 [INFO] src.csv_exporter: CSV сохранён: 2_seismic.csv (8 строк)
+2026-05-13 13:48:59,573 [INFO] src.csv_exporter: CSV сохранён: 2_premise_vent_shaft.csv (1 строк)
+2026-05-13 13:48:59,574 [INFO] src.report_manager: [Шаг 6] Обработка данных (ETL: пивот, разбиение CH4, расчёт предикатов)...
+2026-05-13 13:48:59,577 [INFO] src.data_processor: Вентиляция обработана: 3 записей
+2026-05-13 13:48:59,588 [INFO] src.data_processor: Пивот давления построен: 24 часов
+2026-05-13 13:48:59,591 [INFO] src.data_processor: CH4 разбит на 3 колонки по 20 строк
+2026-05-13 13:48:59,596 [INFO] src.report_manager: [Шаг 7] Формирование шаблонных фраз...
+2026-05-13 13:48:59,600 [INFO] src.phrase_builder: Сформировано 8 шаблонных фраз
+2026-05-13 13:48:59,601 [INFO] src.report_manager: [Шаг 8] Сборка контекста шаблона...
+2026-05-13 13:48:59,623 [INFO] src.context_builder: Контекст собран: 51 ключей
+2026-05-13 13:48:59,623 [INFO] src.report_manager: [Шаг 9] Рендеринг Word-шаблона (docxtpl)...
+2026-05-13 13:48:59,753 [INFO] src.report_generator: Отчёт сохранён: output\reports\report_2_20260513_134859.docx
+2026-05-13 13:48:59,753 [INFO] src.report_manager: [Шаг 10] Отчёт готов: report_2_20260513_134859.docx
+2026-05-13 13:49:03,050 [INFO] src.database_connector: Подключение к SQLite: incident_db.sqlite
+2026-05-13 13:49:03,051 [INFO] src.database_connector: SQLite: соединение установлено
+2026-05-13 13:49:03,053 [INFO] src.database_connector: Соединение с БД закрыто
+2026-05-13 13:49:03,060 [INFO] src.report_manager: [Шаг 3] Подключение к БД и проверка инцидента...
+2026-05-13 13:49:03,060 [INFO] src.database_connector: Подключение к SQLite: incident_db.sqlite
+2026-05-13 13:49:03,061 [INFO] src.database_connector: SQLite: соединение установлено
+2026-05-13 13:49:03,063 [INFO] src.database_connector: Соединение с БД закрыто
+2026-05-13 13:49:03,064 [INFO] src.report_manager: Инцидент найден: 2023-10-29, шахта: 48k3z
+2026-05-13 13:49:03,064 [INFO] src.report_manager: [Шаг 4] Извлечение данных из БД (SQL-запросы)...
+2026-05-13 13:49:03,065 [INFO] src.database_connector: Подключение к SQLite: incident_db.sqlite
+2026-05-13 13:49:03,066 [INFO] src.database_connector: SQLite: соединение установлено
+2026-05-13 13:49:03,068 [INFO] src.query_executor: Запрос [premise]: 1 строк
+2026-05-13 13:49:03,071 [INFO] src.query_executor: Запрос [company]: 0 строк
+2026-05-13 13:49:03,073 [INFO] src.query_executor: Запрос [geo_working]: 1 строк
+2026-05-13 13:49:03,075 [INFO] src.query_executor: Запрос [geo_satellites]: 3 строк
+2026-05-13 13:49:03,077 [INFO] src.query_executor: Запрос [equipment]: 1 строк
+2026-05-13 13:49:03,078 [INFO] src.query_executor: Запрос [regulatory]: 1 строк
+2026-05-13 13:49:03,080 [INFO] src.query_executor: Запрос [ventilation]: 3 строк
+2026-05-13 13:49:03,081 [INFO] src.query_executor: Запрос [sensor_ch4]: 9 строк
+2026-05-13 13:49:03,083 [INFO] src.query_executor: Запрос [pressure]: 43 строк
+2026-05-13 13:49:03,086 [INFO] src.query_executor: Запрос [ch4_floor]: 72 строк
+2026-05-13 13:49:03,087 [INFO] src.query_executor: Запрос [ch4_mid]: 9 строк
+2026-05-13 13:49:03,091 [INFO] src.query_executor: Запрос [seismic]: 12 строк
+2026-05-13 13:49:03,094 [INFO] src.query_executor: Запрос [premise_vent_shaft]: 1 строк
+2026-05-13 13:49:03,094 [INFO] src.database_connector: Соединение с БД закрыто
+2026-05-13 13:49:03,095 [INFO] src.report_manager: [Шаг 5] Сохранение промежуточных данных в CSV...
+2026-05-13 13:49:03,098 [INFO] src.csv_exporter: CSV сохранён: 1_premise.csv (1 строк)
+2026-05-13 13:49:03,100 [INFO] src.csv_exporter: CSV сохранён: 1_company.csv (0 строк)
+2026-05-13 13:49:03,103 [INFO] src.csv_exporter: CSV сохранён: 1_geo_working.csv (1 строк)
+2026-05-13 13:49:03,106 [INFO] src.csv_exporter: CSV сохранён: 1_geo_satellites.csv (3 строк)
+2026-05-13 13:49:03,109 [INFO] src.csv_exporter: CSV сохранён: 1_equipment.csv (1 строк)
+2026-05-13 13:49:03,113 [INFO] src.csv_exporter: CSV сохранён: 1_regulatory.csv (1 строк)
+2026-05-13 13:49:03,118 [INFO] src.csv_exporter: CSV сохранён: 1_ventilation.csv (3 строк)
+2026-05-13 13:49:03,121 [INFO] src.csv_exporter: CSV сохранён: 1_sensor_ch4.csv (9 строк)
+2026-05-13 13:49:03,124 [INFO] src.csv_exporter: CSV сохранён: 1_pressure.csv (43 строк)
+2026-05-13 13:49:03,127 [INFO] src.csv_exporter: CSV сохранён: 1_ch4_floor.csv (72 строк)
+2026-05-13 13:49:03,131 [INFO] src.csv_exporter: CSV сохранён: 1_ch4_mid.csv (9 строк)
+2026-05-13 13:49:03,134 [INFO] src.csv_exporter: CSV сохранён: 1_seismic.csv (12 строк)
+2026-05-13 13:49:03,136 [INFO] src.csv_exporter: CSV сохранён: 1_premise_vent_shaft.csv (1 строк)
+2026-05-13 13:49:03,137 [INFO] src.report_manager: [Шаг 6] Обработка данных (ETL: пивот, разбиение CH4, расчёт предикатов)...
+2026-05-13 13:49:03,140 [INFO] src.data_processor: Вентиляция обработана: 3 записей
+2026-05-13 13:49:03,155 [INFO] src.data_processor: Пивот давления построен: 24 часов
+2026-05-13 13:49:03,161 [INFO] src.data_processor: CH4 разбит на 3 колонки по 24 строк
+2026-05-13 13:49:03,168 [INFO] src.report_manager: [Шаг 7] Формирование шаблонных фраз...
+2026-05-13 13:49:03,170 [INFO] src.phrase_builder: Сформировано 8 шаблонных фраз
+2026-05-13 13:49:03,170 [INFO] src.report_manager: [Шаг 8] Сборка контекста шаблона...
+2026-05-13 13:49:03,192 [INFO] src.context_builder: Контекст собран: 51 ключей
+2026-05-13 13:49:03,192 [INFO] src.report_manager: [Шаг 9] Рендеринг Word-шаблона (docxtpl)...
+2026-05-13 13:49:03,316 [INFO] src.report_generator: Отчёт сохранён: output\reports\report_1_20260513_134903.docx
+2026-05-13 13:49:03,316 [INFO] src.report_manager: [Шаг 10] Отчёт готов: report_1_20260513_134903.docx
+2026-05-13 13:49:14,698 [INFO] src.database_connector: Подключение к SQLite: incident_db.sqlite
+2026-05-13 13:49:14,700 [INFO] src.database_connector: SQLite: соединение установлено
+2026-05-13 13:49:14,703 [INFO] src.database_connector: Соединение с БД закрыто
+2026-05-13 13:49:14,710 [INFO] src.report_manager: [Шаг 3] Подключение к БД и проверка инцидента...
+2026-05-13 13:49:14,711 [INFO] src.database_connector: Подключение к SQLite: incident_db.sqlite
+2026-05-13 13:49:14,712 [INFO] src.database_connector: SQLite: соединение установлено
+2026-05-13 13:49:14,715 [INFO] src.database_connector: Соединение с БД закрыто
+2026-05-13 13:49:14,716 [INFO] src.report_manager: Инцидент найден: 2023-03-14, шахта: kaz_mine
+2026-05-13 13:49:14,717 [INFO] src.report_manager: [Шаг 4] Извлечение данных из БД (SQL-запросы)...
+2026-05-13 13:49:14,718 [INFO] src.database_connector: Подключение к SQLite: incident_db.sqlite
+2026-05-13 13:49:14,719 [INFO] src.database_connector: SQLite: соединение установлено
+2026-05-13 13:49:14,721 [INFO] src.query_executor: Запрос [premise]: 1 строк
+2026-05-13 13:49:14,725 [INFO] src.query_executor: Запрос [company]: 0 строк
+2026-05-13 13:49:14,726 [INFO] src.query_executor: Запрос [geo_working]: 1 строк
+2026-05-13 13:49:14,727 [INFO] src.query_executor: Запрос [geo_satellites]: 1 строк
+2026-05-13 13:49:14,729 [INFO] src.query_executor: Запрос [equipment]: 1 строк
+2026-05-13 13:49:14,730 [INFO] src.query_executor: Запрос [regulatory]: 1 строк
+2026-05-13 13:49:14,732 [INFO] src.query_executor: Запрос [ventilation]: 3 строк
+2026-05-13 13:49:14,734 [INFO] src.query_executor: Запрос [sensor_ch4]: 8 строк
+2026-05-13 13:49:14,736 [INFO] src.query_executor: Запрос [pressure]: 48 строк
+2026-05-13 13:49:14,738 [INFO] src.query_executor: Запрос [ch4_floor]: 60 строк
+2026-05-13 13:49:14,739 [INFO] src.query_executor: Запрос [ch4_mid]: 9 строк
+2026-05-13 13:49:14,743 [INFO] src.query_executor: Запрос [seismic]: 8 строк
+2026-05-13 13:49:14,744 [INFO] src.query_executor: Запрос [premise_vent_shaft]: 1 строк
+2026-05-13 13:49:14,745 [INFO] src.database_connector: Соединение с БД закрыто
+2026-05-13 13:49:14,745 [INFO] src.report_manager: [Шаг 5] Сохранение промежуточных данных в CSV...
+2026-05-13 13:49:14,749 [INFO] src.csv_exporter: CSV сохранён: 2_premise.csv (1 строк)
+2026-05-13 13:49:14,752 [INFO] src.csv_exporter: CSV сохранён: 2_company.csv (0 строк)
+2026-05-13 13:49:14,757 [INFO] src.csv_exporter: CSV сохранён: 2_geo_working.csv (1 строк)
+2026-05-13 13:49:14,760 [INFO] src.csv_exporter: CSV сохранён: 2_geo_satellites.csv (1 строк)
+2026-05-13 13:49:14,763 [INFO] src.csv_exporter: CSV сохранён: 2_equipment.csv (1 строк)
+2026-05-13 13:49:14,767 [INFO] src.csv_exporter: CSV сохранён: 2_regulatory.csv (1 строк)
+2026-05-13 13:49:14,770 [INFO] src.csv_exporter: CSV сохранён: 2_ventilation.csv (3 строк)
+2026-05-13 13:49:14,776 [INFO] src.csv_exporter: CSV сохранён: 2_sensor_ch4.csv (8 строк)
+2026-05-13 13:49:14,778 [INFO] src.csv_exporter: CSV сохранён: 2_pressure.csv (48 строк)
+2026-05-13 13:49:14,781 [INFO] src.csv_exporter: CSV сохранён: 2_ch4_floor.csv (60 строк)
+2026-05-13 13:49:14,785 [INFO] src.csv_exporter: CSV сохранён: 2_ch4_mid.csv (9 строк)
+2026-05-13 13:49:14,790 [INFO] src.csv_exporter: CSV сохранён: 2_seismic.csv (8 строк)
+2026-05-13 13:49:14,792 [INFO] src.csv_exporter: CSV сохранён: 2_premise_vent_shaft.csv (1 строк)
+2026-05-13 13:49:14,793 [INFO] src.report_manager: [Шаг 6] Обработка данных (ETL: пивот, разбиение CH4, расчёт предикатов)...
+2026-05-13 13:49:14,796 [INFO] src.data_processor: Вентиляция обработана: 3 записей
+2026-05-13 13:49:14,811 [INFO] src.data_processor: Пивот давления построен: 24 часов
+2026-05-13 13:49:14,816 [INFO] src.data_processor: CH4 разбит на 3 колонки по 20 строк
+2026-05-13 13:49:14,823 [INFO] src.report_manager: [Шаг 7] Формирование шаблонных фраз...
+2026-05-13 13:49:14,826 [INFO] src.phrase_builder: Сформировано 8 шаблонных фраз
+2026-05-13 13:49:14,826 [INFO] src.report_manager: [Шаг 8] Сборка контекста шаблона...
+2026-05-13 13:49:14,853 [INFO] src.context_builder: Контекст собран: 51 ключей
+2026-05-13 13:49:14,854 [INFO] src.report_manager: [Шаг 9] Рендеринг Word-шаблона (docxtpl)...
+2026-05-13 13:49:14,998 [INFO] src.report_generator: Отчёт сохранён: output\reports\report_2_20260513_134914.docx
+2026-05-13 13:49:14,999 [INFO] src.report_manager: [Шаг 10] Отчёт готов: report_2_20260513_134914.docx
+2026-05-13 13:49:19,340 [INFO] src.database_connector: Подключение к SQLite: incident_db.sqlite
+2026-05-13 13:49:19,341 [INFO] src.database_connector: SQLite: соединение установлено
+2026-05-13 13:49:19,346 [INFO] src.database_connector: Соединение с БД закрыто
+2026-05-13 13:49:19,352 [INFO] src.report_manager: [Шаг 3] Подключение к БД и проверка инцидента...
+2026-05-13 13:49:19,353 [INFO] src.database_connector: Подключение к SQLite: incident_db.sqlite
+2026-05-13 13:49:19,354 [INFO] src.database_connector: SQLite: соединение установлено
+2026-05-13 13:49:19,357 [INFO] src.database_connector: Соединение с БД закрыто
+2026-05-13 13:49:19,358 [INFO] src.report_manager: Инцидент найден: 2023-10-29, шахта: 48k3z
+2026-05-13 13:49:19,358 [INFO] src.report_manager: [Шаг 4] Извлечение данных из БД (SQL-запросы)...
+2026-05-13 13:49:19,359 [INFO] src.database_connector: Подключение к SQLite: incident_db.sqlite
+2026-05-13 13:49:19,359 [INFO] src.database_connector: SQLite: соединение установлено
+2026-05-13 13:49:19,363 [INFO] src.query_executor: Запрос [premise]: 1 строк
+2026-05-13 13:49:19,365 [INFO] src.query_executor: Запрос [company]: 0 строк
+2026-05-13 13:49:19,367 [INFO] src.query_executor: Запрос [geo_working]: 1 строк
+2026-05-13 13:49:19,368 [INFO] src.query_executor: Запрос [geo_satellites]: 3 строк
+2026-05-13 13:49:19,369 [INFO] src.query_executor: Запрос [equipment]: 1 строк
+2026-05-13 13:49:19,371 [INFO] src.query_executor: Запрос [regulatory]: 1 строк
+2026-05-13 13:49:19,372 [INFO] src.query_executor: Запрос [ventilation]: 3 строк
+2026-05-13 13:49:19,374 [INFO] src.query_executor: Запрос [sensor_ch4]: 9 строк
+2026-05-13 13:49:19,375 [INFO] src.query_executor: Запрос [pressure]: 43 строк
+2026-05-13 13:49:19,378 [INFO] src.query_executor: Запрос [ch4_floor]: 72 строк
+2026-05-13 13:49:19,380 [INFO] src.query_executor: Запрос [ch4_mid]: 9 строк
+2026-05-13 13:49:19,382 [INFO] src.query_executor: Запрос [seismic]: 12 строк
+2026-05-13 13:49:19,383 [INFO] src.query_executor: Запрос [premise_vent_shaft]: 1 строк
+2026-05-13 13:49:19,384 [INFO] src.database_connector: Соединение с БД закрыто
+2026-05-13 13:49:19,385 [INFO] src.report_manager: [Шаг 5] Сохранение промежуточных данных в CSV...
+2026-05-13 13:49:19,388 [INFO] src.csv_exporter: CSV сохранён: 1_premise.csv (1 строк)
+2026-05-13 13:49:19,390 [INFO] src.csv_exporter: CSV сохранён: 1_company.csv (0 строк)
+2026-05-13 13:49:19,392 [INFO] src.csv_exporter: CSV сохранён: 1_geo_working.csv (1 строк)
+2026-05-13 13:49:19,398 [INFO] src.csv_exporter: CSV сохранён: 1_geo_satellites.csv (3 строк)
+2026-05-13 13:49:19,401 [INFO] src.csv_exporter: CSV сохранён: 1_equipment.csv (1 строк)
+2026-05-13 13:49:19,403 [INFO] src.csv_exporter: CSV сохранён: 1_regulatory.csv (1 строк)
+2026-05-13 13:49:19,406 [INFO] src.csv_exporter: CSV сохранён: 1_ventilation.csv (3 строк)
+2026-05-13 13:49:19,408 [INFO] src.csv_exporter: CSV сохранён: 1_sensor_ch4.csv (9 строк)
+2026-05-13 13:49:19,413 [INFO] src.csv_exporter: CSV сохранён: 1_pressure.csv (43 строк)
+2026-05-13 13:49:19,417 [INFO] src.csv_exporter: CSV сохранён: 1_ch4_floor.csv (72 строк)
+2026-05-13 13:49:19,420 [INFO] src.csv_exporter: CSV сохранён: 1_ch4_mid.csv (9 строк)
+2026-05-13 13:49:19,423 [INFO] src.csv_exporter: CSV сохранён: 1_seismic.csv (12 строк)
+2026-05-13 13:49:19,425 [INFO] src.csv_exporter: CSV сохранён: 1_premise_vent_shaft.csv (1 строк)
+2026-05-13 13:49:19,425 [INFO] src.report_manager: [Шаг 6] Обработка данных (ETL: пивот, разбиение CH4, расчёт предикатов)...
+2026-05-13 13:49:19,432 [INFO] src.data_processor: Вентиляция обработана: 3 записей
+2026-05-13 13:49:19,442 [INFO] src.data_processor: Пивот давления построен: 24 часов
+2026-05-13 13:49:19,448 [INFO] src.data_processor: CH4 разбит на 3 колонки по 24 строк
+2026-05-13 13:49:19,453 [INFO] src.report_manager: [Шаг 7] Формирование шаблонных фраз...
+2026-05-13 13:49:19,455 [INFO] src.phrase_builder: Сформировано 8 шаблонных фраз
+2026-05-13 13:49:19,456 [INFO] src.report_manager: [Шаг 8] Сборка контекста шаблона...
+2026-05-13 13:49:19,480 [INFO] src.context_builder: Контекст собран: 51 ключей
+2026-05-13 13:49:19,480 [INFO] src.report_manager: [Шаг 9] Рендеринг Word-шаблона (docxtpl)...
+2026-05-13 13:49:19,611 [INFO] src.report_generator: Отчёт сохранён: output\reports\report_1_20260513_134919.docx
+2026-05-13 13:49:19,612 [INFO] src.report_manager: [Шаг 10] Отчёт готов: report_1_20260513_134919.docx
